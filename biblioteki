@@ -1,7 +1,29 @@
 import pandas as pd 
 import numpy as np
 import matplotlib.pyplot as plt
+plt.rcParams['font.size'] = 24
+
+import seaborn as sns
+sns.set(font_scale = 2)
+from sklearn.model_selection import train_test_split
+
+from IPython.core.pylabtools import figsize
 import csv
 from pandas import read_csv as read
 import sklearn as sk
 from sklearn.ensemble import RandomForestClassifier
+
+//////библиотеки
+
+
+
+
+# Чтение датасета
+data = pd.read_csv('data.csv')
+
+# 5 первых записей
+data.head()
+
+
+# удаление столбца
+data.drop(columns=['weight'])
